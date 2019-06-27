@@ -1,0 +1,121 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\usepackage{geometry}
+\geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in, rmargin=1in}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+
+\usepackage[dvipsnames]{xcolor}
+\definecolor{linkcolor}{rgb}{0, 0, 0.35}
+\definecolor{linkbordercolor}{rgb}{.9, .9, .9}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    anchorcolor=linkcolor,
+    citecolor=linkcolor,
+    filecolor=linkcolor,
+    urlcolor=linkcolor,
+    bookmarks=true,
+    citebordercolor=linkbordercolor,
+    filebordercolor=linkbordercolor,
+    linkbordercolor=linkbordercolor,
+}
+
+\usepackage[doublespacing]{setspace}
+\usepackage{graphicx}
+
+% COMMENTS and TODO notes
+\usepackage[colorinlistoftodos,prependcaption,textsize=tiny]{todonotes}
+\newcommand{\note}[1]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue]{#1}}
+
+%compact lists
+\usepackage{enumitem}
+\setlist{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+%single spacing
+\renewcommand{\baselinestretch}{1.0} 
+
+%remove abstract caption
+\renewcommand{\abstractname}{}
+
+%definition of \maketitle
+% https://tex.stackexchange.com/questions/125552/logo-and-picture-on-titlepage
+\makeatletter         
+\def\@maketitle{
+\raggedright
+\includegraphics[width=0.75\textwidth]{josecon_logo_full}\\[15ex]
+\begin{center}
+{\Huge \bfseries \@title }\\[4ex] 
+% {\Large  \@author}\\[4ex] 
+This version: \@date\\[6ex]
+% \includegraphics[width = 40mm]{josecon_logo_full}
+\end{center}}
+\makeatother
+
+% table of contents format
+\usepackage{titlesec}
+\usepackage{titletoc}
+% indented subsection (in toc)
+\dottedcontents{section}[0.5cm]{}{1.75em}{0.75pc}
+\titlecontents{chapter}
+[0.5cm]             % left margin
+{\vspace{0.2cm}}    % above code
+{%                  % numbered format
+{\thecontentslabel. }%
+}%
+{}                  % unnumbered format
+{\titlerule*[5pt]{.}}% filler-page-format, e.g dots
+% indented subsection (in toc)
+\titlecontents*{subsection}
+[1.0cm]             % left margin
+{}                  % above code
+{%                  % numbered format
+{\thecontentslabel. }%
+}%
+{}                  % unnumbered format
+{}                  % filler-page-format
+[.~]                % below code
+\renewcommand{\contentsname}{{\small Table of contents}}
+
+
+\begin{document}
+\title{{\Large The Journal of Open Source Economics}\\ \vspace{0.5em}{\Huge Journal Charter}}
+% \author{Fedor Iskhakov}
+\date{June 2019 {\small(draft)}}
+\maketitle
+\thispagestyle{empty}
+\setcounter{page}{0}
+\begin{abstract}
+\noindent
+This document outlines the foundational principals and the objectives of 
+The Journal of Opens Source Economics~(JOSEcon),
+describes its organizational structure and operational strategy.
+The governing rules and practices are periodically updated to reflect 
+the development of the journal.
+\end{abstract}
+\vspace{8ex}
+
+% Table of contents
+\setlength{\parskip}{0em}
+{\singlespacing \footnotesize \tableofcontents}
+\clearpage
+\setlength{\parskip}{0.5em}
+
+% Main structure
+\section{Executive summary}
+\input 0-summary.tex
+
+\section{Background and Motivation}
+\input 1-motivation.tex
+
+\section{Vision and Mission of JOSEcon}
+\input 2-vision.tex
+
+\section{JOSEcon Operations}
+\input 3-operations.tex
+
+\end{document}

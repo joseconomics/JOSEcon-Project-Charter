@@ -1,0 +1,97 @@
+%!TEX root = josecon_charter.tex
+
+\subsection{Numerical methods and software development in economics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The use of numerical methods is becoming essential in many fields of modern economic research.
+As theoretical models in both macro- and microeconomics are gaining realism and moving away from
+analytically tractable specification, numerical solutions provide the necessary tools for 
+analyzing the implications of these models.
+The development of computing technology itself has enabled the growth of computationally intensive
+methods in econometrics.
+Similarly, the development of computational methods is enabling the estimation of the deep 
+structural parameters of the advanced theoretical models using real life data.
+Counterfactual simulations based on these calibrated and/or estimated models are 
+invaluable for our understanding of the underlying mechanisms and the analysis of 
+policy reforms in all fields of economics.
+
+However, at large, the code development practices in economics lack the level of 
+sophistication typical for other sciences such as physics or biology.
+Even those economists who are actively working with numerical models rarely have 
+any software engineering training or use the standard toolchains.
+The common practice is copying the code base from supervisor to the student, and from
+project to project -- resulting in repeated and long surviving errors.
+
+Moreover, even though journals typically do require submission of the written code for the 
+papers that rely on numerical methods, in the absence of common standards for such 
+code supplements, the deposited code is rarely checked.  It is not uncommon that the
+code archived at the publishers' websites is hard to re-use simply because of the lack
+of clear description of the operating environment it should be ran with.
+The code made available through personal websites may be updated more regularly, 
+but may be as hard to use.
+
+Computational methods and solution algorithms are typically
+published ``on paper'' in isolation from the programming implementations, and therefore
+are often coded by from scratch.
+In the absence of canonical implementations, the same methods are then programmed multiple 
+times by different researchers, 
+resulting in the practice of ``reinventing the wheel'' and sometimes introducing 
+critical errors into the well established methods.
+
+Although computational economics has not (yet) experienced a replicability crisis of the scale that has crippled some other fields, any sensible person who has done computationally intensive research will have sometimes had the queasy feeling that many results (in other people's computational work) are probably fragile, and more than a few may even be wrong because of bugs buried in the sea of vast incomprehensible code that produced the results.
+
+We are in this bad equilibrium because there are few incentives for economists to produce high quality, robust, well-documented code that is usable and testable by others.
+
+
+\subsection{Right incentives for developing better code}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The current situation can be improved greatly by learning from other disciplines,
+first of all computer science and software engineering.
+In the brighter future the field of computational economics will possess a growing library 
+of well architected and documented code that will cover the majority of known 
+computational models.
+Through efficient sharing and repeated scrutiny within independent projects,
+the code base will gain reliability. Eventually, a collection of trusted canonical
+implementations will be formed.
+The growing community of economic code developers will contribute to the spreading 
+of good coding practices and provide a role model for the students who wish to join the field.
+
+
+The purpose of The Journal of Open Source Economics (JOSEcon) is to fuel the 
+development of the computational economics community by providing the right incentives
+for writing high quality reusable code -- publications and collection of citations.
+
+JOSEcon publishes \emph{code papers} which are small descriptions of the software package
+aimed at solving a particular well-defined problem in economics, with the focus
+of the editorial process being at the code itself.
+A typical JOSEcon publication contains a well documented software package deposited to
+a public repository, a short script or a notebook that demonstrates the use of the 
+package, and a few page description of the are of application of the developed software
+as well as the provided example.
+Under separate rubric JOSEcon also publishes the code developed for and accompanying 
+specific traditional papers, as well as replications of the existing published results 
+(details below).
+
+As a first step in this direction, the Econ-ARK project has been working to develop Jupyter notebooks that illustrate the use of the tools we are creating. It is easy to see how tools like Jupyter notebooks could revolutionize teaching; but if a mechanism like the JSS 
+
+Overall, if JOSEcon succeeds in creating a mechanism by which a contribution to computational economics community can be indexed and its importance measured by citation counts and other traditional metrics that count, for example, for tenure, we could have a whole new paradigm for academic publication of computational tools for economists (and, maybe eventually for the rest of the field).
+
+
+\subsection{Success of the Journal of Statistical Software}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The academic statistics community, in particular, confronted basically the same set of problems in the mid-90s, which prompted a few statistics professors to form the Journal of Statistical Software (JSS). (The history of the JSS is recounted quite well in the look-back review\footnote{\url{http://gifi.stat.ucla.edu/janspubs/2014/notes/deleeuw_mullen_U_14.pdf}} presentation by the founding editor, with many valuable lessons learned.)
+
+
+To illustrate the idea of the JSS, think of a case where an academic statistician published a paper in a regular statistics journal with some mathematical/statistical/conceptual contribution. Associated with that paper was some computer code implementing or illustrating the idea/algorithm/method. The peer review process would vet the mathematical/statistical/conceptual contribution, but there was no real quality check on the code. A social norm or journal policy may have required that the author share a zip file of the code with anybody who asked for it, or such a zip file may have been available from the journal as supplemental material for the article, but the author had no obligation to help anybody else verify or use the code. It was nobody's job really to ensure that the code was usable by anybody else or on any other machine or at any future time.
+
+The JSS solved this problem (for statistics) by inventing a mechanism by which the production of high quality code could be professionally rewarded in the usual coin of the academic realm: A code contribution published by the JSS can be listed on the author's CV as an "article" that is eligible to receive citations that are treated by the profession the same way as citations to regular articles in more traditional journals (e.g., they show up in Google Scholar and other citation counting tools).
+
+Of course, this would not be sufficient if the JSS were viewed as a "junk journal." But, using the same "impact factor" methodology that produces the conventional conclusion that the "top 5" economics journals are AER, Econometrica, JPE, QJE, ReStud (I've excluded finance journals), the JSS is now the fifth-highest "impact factor" journal in Statistics. This is astounding for a journal founded only 20 years ago. (The youngest of the other leading "top 5" journals in statistics is about 90 years old, leaving a side a "reviews" journal).
+
+Elaborating: An "article" in the JSS is basically a corpus of computer code with some illustrations of the use of the code. Standards of review for a submission include whether the code is well documented, has useful illustrations, has adequate quality tests, etc.
+
+With the tools that exist now, I think it would be possible to do an even better job for computational economics than JSS has done for statistics. Github, Python, Jupyter notebooks, and a host of other developments have created a whole ecosystem that could make such a project work much better than was possible in statistics when JSS was founded.
+
+

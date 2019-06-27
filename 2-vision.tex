@@ -1,0 +1,255 @@
+%!TEX root = josecon_charter.tex
+
+\subsection{Foundational principles}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+JOSEcon is a developer-friendly, free and open-access, peer-reviewed journal for 
+economic software packages.
+
+JOSEcon accepts submissions of \emph{code} written in conjunction with economic
+research (implementations of the original numerical methods, estimation algorithms, 
+replications of the existing results and methods),
+and publishes \emph{code papers} which are short description of the purpose of the submitted 
+software along with an example of use.
+
+Requirements for the code paper are minimal to minimize additional effort needed to
+submit to JOSEcon.
+
+The review process has two stages. First stage aims at assessing the contribution
+of the submitted code in moving forward the open source economic code base.
+This assessment is performed by one or several editors, possibly with additional 
+anonymous referee or referees.
+
+The second stage of the review process is public and focuses on code review. 
+Before acceptance decision is made, the assigned referee or referees make sure that 
+the submitted software satisfies the list of known JOSEcon requirements.
+
+The accepted code papers are published on \href{http://josecon.org}{JOSEcon website}
+along with a link to the public repository containing the accepted code itself.
+The published code paper is assigned a digital object identifier (DOI) with CrossRef, 
+which can be displayed in the repository with a JOSEcon badge.
+
+JOSEcon accepts for publication only open source code as per 
+the \href{https://opensource.org/osd}{OSI definition}.
+
+There are no restrictions on the programming languages at JOSEcon: submissions of code 
+written in any languages are welcome, and the popularity of the language does not 
+affect the outcome of the submission (apart, perhaps, from how fast the reviewers can be
+appointed).
+
+There are no restrictions on the technology and hardware required for running
+the submitted code (apart from how fast the reviewers can be appointed).
+
+The software should be feature complete (no half-baked solutions) and designed for 
+maintainable extension (not one-off modifications). 
+Minor ‘utility’ packages, including ‘thin’ API clients, are not acceptable.
+
+The software should be available through public repository (GitHub, GitLab, etc),
+namely:
+\begin{itemize}
+\item Be stored in a repository that can be cloned without registration
+\item Be stored in a repository that is browsable online without registration
+\item Have an issue tracker that is readable without registration
+\item Permit individuals to create issues/file tickets against your repository
+\end{itemize}
+
+JOSEcon fosters the development of a community of computational economists, who may be
+involved with a journal to a varying degree (from developers to users of the economic code,
+from editors to reviewers to simply campaigners), but who share similar views about the
+future of computations in economics, and are responsive and welcoming to the new 
+members of the community.
+
+Authors, editors and reviewers, as well as any other members of JOSEcon community,
+adhere to a code of conduct adapted from the 
+\href{http://contributor-covenant.org/}{Contributor Covenant} code of conduct.
+
+Authors, editors and reviewers of JOSEcon are expected and required to adhere to ethical
+standards, in particular:
+\begin{itemize}
+\item All authors are required to make the JOSEcon editors and the community aware of any 
+mistakes in their published work which they become aware.
+\item Plagiarism for both code and code papers is not tolerated.
+\item Repeated submissions of the same work is not allowed. 
+\item Submissions of the work which is under revision in a separate software journal is not allowed. 
+(It is, however, perfectly fine to submit the ``big'' paper to a traditional journal, while the software
+developed for it being submitted to JOSEcon, perhaps with a smaller scale example of use.)
+\item Listed authors on the code papers must include all people who contributed towards the submission, 
+and not include anybody who has not. 
+For the replication papers JOSEcon encourages but does not require the inclusion of the original authors.
+\item Code reviews should be accurate and non-fraudulent. 
+\item Reviewers and editors must disclose conflicts of interest.
+\end{itemize}
+
+JOSS is an open access journal. Copyright of JOSS papers is retained by submitting authors and accepted papers are subject to a Creative Commons Attribution 4.0 International License.
+
+Any code snippets included in JOSS papers are subject to the MIT license regardless of the license of the submitted software package under review.
+
+Any use of the JOSS logo is licensed CC BY 4.0.
+
+
+\subsection{Types of JOSEcon papers}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+JOSEcon publishes three types of code papers:
+
+\begin{enumerate}
+
+\item Full featured code library or package that implements a particular model or 
+solution/estimation method used in economics.
+It is expected that a package has a well documented API, and is accompanied by
+an independent run script that implements an example (or multiple examples) of use
+of the package.
+The code paper describes the purpose of the software, and presents the computed 
+example.
+Generally there is no single traditional paper associated with this type of submission, 
+but is it understood that the research applications of the software would follow and built
+on the provided examples.
+
+\item Code supplement for a particular traditional paper that relies heavily on computations.
+The scenario under the second type of submission is that the code written during the work
+on a bigger paper is of a sufficient quality to constitute a publication at JOSEcon.
+The primary criterion here is whether the code can be used in a similar application, or
+serve as the bases for development of the next generation software in the area.
+It is expected that the code is organized into a re-usable library/package, and a run
+script that calls the routines in the library to produce the results in the paper.
+Ideally, the whole set of results should be reproduced by the run script, but 
+in case where the required run time would hinder the review process, simpler examples
+are sufficient.
+
+\item Replications of the existing methods and published results, written in new
+programming languages, or with significant refactoring and improvements in code architecture.
+JOSEcon welcomes replications of existing papers, but has special rules requiring
+the authors of the replicated paper be contacted and invited to participate in the 
+replication.  It is not necessary that they do, but the record of communication should
+be submitted together with the code paper.
+The replication code should also be organized into library/package and a run script
+structure, and it is expected that the run script replicates the results in the same
+form as in the original paper for easier comparison.
+
+\end{enumerate}
+
+Many other types and kinds of software written by or for economists are not currently
+considered for publication at JOSEcon. 
+In particular, the journal does not accept:
+\begin{itemize}
+\item Simple technical code such as thin library wrappers,
+converters, an similar;
+\item Text markup and style files such as latex or html;
+\item Code written exclusively for teaching purposes;\note{Fedor: refereeing contribution of teaching materials is all different matter}
+\end{itemize}
+
+\emph{Jupyter notebooks} and similar document format that allows for combination of executable 
+code cells with explanatory comments, is an excellent way to present the API of a library and set
+up examples. 
+JOSEcon encourages the use of this formal for the run scripts that can simultaneously present 
+the example.\note{Fedor: static pdf version of Jupyter notebooks can be used for code paper?}
+
+
+\subsection{Audience and role models}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+JOSEcon offers several role models for a few target audiences.
+
+The primary audience (JOSEcon community) are the economists who already rely on computational
+methods or plan to use them in the near future: faculty and students writing code in their 
+research projects.
+
+Members of the JOSEcon community fill the roles on the editorial board and referees, and are
+active readers and user of published code.
+
+There is a good number of open source projects in economics producing excellent code already, 
+as well as several projects aimed at teaching computational economics.
+JOSEcon strives to unite these developers into the bigger scale community.
+
+\begin{enumerate}
+\item \href{https://econ-ark.org/}{Econ-ARK} by Christopher Carroll and the team;
+\item \href{https://quantecon.org/}{QuantEcon} by Thomas Sargent, John Stachurski and the team;
+\item \href{https://github.com/OpenSourceEconomics}{OpenSourceEconomics} by Philipp Eisenhauer and the team;
+\item \href{https://github.com/janosg/skillmodels}{skillmodels} by Janos Gabler and the team;
+\item \href{http://www.vfitoolkit.com/}{VFI toolkit} by Robert Kirkby;
+\item \href{https://github.com/EconForge}{EconForge and Dolo library} by Pablo Winant;
+\item \href{}{Hetsol toolkit} by Michael Rieter;
+\item \href{https://www.dynare.org}{Dynare} by Michel Juillard and the team;
+\item \href{http://www.macromodelbase.com}{Macroeconomic Model Data Base} by Volker Wielands;
+\item \href{https://pypi.org/project/pyblp/}{pyblp package} by Christopher Conlon and Jeff Gortmaker;
+\end{enumerate}
+
+There are several ways that new members are recruited into the JOSEcon community.  
+Existing faculty who are interested in computational methods would benefit from the lower 
+barrier of entry thanks to JOSEcon collection of tested and reliable code.
+In addition, the code published at JOSEcon would provide great resource in teaching.
+Students working in the fields which have substantial computational component would
+have a chance to start their careers by publishing in JOSEcon relatively quickly.
+The younger students interested in the field could use their assignments and term papers
+to replicate the results of published traditional papers, and also publish well
+ahead of their job market.
+
+Important other role models include:
+\begin{itemize}
+\item Referee for a different journal wishing to verify the computational part of 
+the paper provided that is has been submitted to JOSEcon;
+\item Member of editorial board of another journal to suggest independent code review 
+in their editorial process;
+\end{itemize}  
+
+
+\subsection{Collaboration with other organizations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+JOSEcon is actively seeking collaborations with other organizations to popularize 
+better practices in the use of numerical methods throughout the economic profession.
+
+\paragraph{Societies:} 
+Endorsements from various societies in economics help JOSEcon
+gain respect in the profession.
+\begin{itemize}
+\item \href{https://comp-econ.org/}{Society of Computational Economics}
+\end{itemize}
+
+
+\paragraph{Existing software journals:} The JOSEcon editorial team carefully monitors
+other software journals both to absorb better journal practices, and to monitor 
+competition. 
+\begin{enumerate}
+\item \href{https://joss.theoj.org}{Journal of Open Source Software (JOSS)}
+\begin{itemize}
+\item Founded in May 2016
+\item Developer-friendly, very short structured “papers”, focus of the code
+\item Indexed in CrossRef, DOI identifiers
+\item The founder and current editor-in-chief is \href{http://www.arfon.org/about/}{Arfon Smith}
+\end{itemize}
+\item \href{https://jose.theoj.org}{Journal of Open Source Education (JOSE)}
+\item \href{https://www.jstatsoft.org}{Journal of Statistical Software (JSS)}
+\item \href{http://rescience.github.io}{ReScience C journal}
+\item \href{https://www.igi-global.com/journal/international-journal-open-source-software/1123}{International Journal of Open Source Software and Processes}
+\item \href{https://ropensci.org}{rOpenSci}
+\item \href{http://www.runmycode.org}{Run My Code community}
+\item \href{https://www.journals.elsevier.com/software-impacts/}{Software Impacts}
+\end{enumerate}
+
+JOSEcon builds on the principles and infrastructure developed by 
+\href{http://www.theoj.org/}{The Open Journals}, which includes JOSS and JOSE. 
+
+\paragraph{Traditional journals:}
+JOSEcon is actively seeking relationships with ``traditional'' journals, and hopes that
+when it is reputable enough, such relationships would develop without outside force.
+
+JOSEcon vision is that in the long term traditional journals would take into consideration
+during their editorial process the publication at JOSEcon for the papers that rely heavily 
+on computation.
+Such collaboration would benefit the traditional journals, taking code review part off 
+their shoulders. 
+
+\paragraph{Publishing houses:} 
+It is unclear how JOSEcon would coordinate with the existing publishing houses, being
+absolutely open (both the publications, and the editorial process) to the public.
+Yet, involvement of a respected brand would be invaluable for the development of 
+the journal.
+
+\paragraph{Open Source Initiative:}
+JOSEcon is an affiliate of the \href{https://opensource.org/}{Open Source Initiative}.
+\note{Fedor: formal affiliation pending}
+As such JOSEcon is committed to public support for open source software and the role OSI plays therein.
+
+
+
