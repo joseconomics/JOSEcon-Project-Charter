@@ -5,42 +5,48 @@
 
 The use of numerical methods is becoming essential in many fields of modern economic research.
 As theoretical models in both macro- and microeconomics are gaining realism and moving away from
-analytically tractable specification, numerical solutions provide the necessary tools for 
+analytically tractable specifications, numerical solutions provide the necessary tools for 
 analyzing the implications of these models.
 The development of computing technology itself has enabled the growth of computationally intensive
 methods in econometrics.
 Similarly, the development of computational methods is enabling the estimation of the deep 
 structural parameters of advanced theoretical models using real life data.
 Counterfactual simulations based on these calibrated and/or estimated models are 
-invaluable for our understanding of the underlying mechanisms and the analysis of 
+invaluable for our understanding of underlying mechanisms and analysis of 
 policy reforms in all fields of economics.
 
-However, at large, the code development practices in economics lack the level of 
-sophistication typical for other sciences such as physics or biology.
-Even those economists who are actively working with numerical models rarely have 
-any software engineering training or use the standard toolchains.
-The common practice is copying the code base from supervisor to the student, and from
-project to project -- resulting in repeated and long surviving errors.
+However, in general, code development practices in economics lack the level of
+sophistication typical for other sciences such as physics or biology.  Even
+those economists who are actively working with numerical models rarely have
+any software engineering training or use the standard toolchains.  The most
+common practice is copying the code base from supervisor to the student, and
+from project to project, resulting in repeated and long surviving errors.
 
-Moreover, even though journals typically do require submission of the written code for the 
+Moreover, even though journals typically require submission of written code for 
 papers that rely on numerical methods, in the absence of common standards for such 
 code supplements, the deposited code is rarely checked.  It is not uncommon that the
 code archived at the publishers' websites is hard to re-use simply because of the lack
-of clear description of the operating environment it should be run with.
+of clear description of the operating environment it should be executed within.
 The code made available through personal websites may be updated more regularly, 
 but may be as hard to use.
 
-Computational methods and solution algorithms are typically
-published ``on paper'' in isolation from the programming implementations, and therefore
-are often coded by from scratch.
-In the absence of canonical implementations, the same methods are then programmed multiple 
-times by different researchers, 
-resulting in the practice of ``reinventing the wheel'' and sometimes introducing 
-critical errors into the well established methods.
+Computational methods and solution algorithms are typically published ``on
+paper'' in isolation from the programming implementations, and therefore often
+coded from scratch.  In the absence of canonical implementations, the same
+methods are then programmed multiple times by different researchers, resulting
+in the practice of ``reinventing the wheel'' and sometimes introducing
+critical errors into well established methods.
 
-Although computational economics has not (yet) experienced a replicability crisis of the scale that has crippled some other fields, any sensible person who has done computationally intensive research will have sometimes had the queasy feeling that many results (in other people's computational work) are probably fragile, and more than a few may even be wrong because of bugs buried in the sea of vast incomprehensible code that produced the results.
+Although computational economics has not (yet) experienced a replicability
+crisis of the scale that has crippled some other fields, any sensible person
+who has done computationally intensive research will have sometimes had the
+queasy feeling that many results (in other people's computational work) are
+probably fragile, and more than a few may even be wrong because of bugs buried
+in the sea of vast incomprehensible code that produced the results.
 
-We are in this bad equilibrium because there are few incentives for economists to produce high quality, robust, well-documented code that is usable and testable by others.
+We are in this bad equilibrium because there are few incentives for economists
+to produce high quality, robust, well-documented code that is usable and
+testable by others.
 
 
 \subsection{Right incentives for developing better code}
